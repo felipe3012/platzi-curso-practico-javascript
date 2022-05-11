@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./figuras.css">    
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <header>
+                <h1>Figuras geométricas !</h1>
+                <p>Este es el primer taller del curso práctico de JavaScript</p>
+            </header>
+        
+            <section>
+                <h2>1. Calcula el área y perímetro de una figura geométrica</h2>
+                <form>
+                    <ul class="flex-outer">
+                        <li>
+                            <label for="figura">Figura: </label>
+                            <select name="figura" id="figura" onchange="validateFigura()">
+                                <option value="">Selecciones una...</option>
+                                <option value="1">Cuadrado</option>
+                                <option value="2">Triángulo Equilatero</option>
+                                <option value="3">Triángulo Isóceles</option>
+                                <option value="4">Circulo</option>                                
+                            </select>
+                        </li>
+                        <li id="ladocuadrado-label">
+                            <label for="ladocuadrado">Lado Cuadrado</label>
+                            <input type="number" id="ladocuadrado" placeholder="Escriba el tamaño del lado del cuadrado">
+                        </li>
+                        <li id="lado1triangulo-label">
+                            <label for="lado1triangulo">Lado 1 Triangulo</label>
+                            <input type="number" id="lado1triangulo" placeholder="Escriba el tamaño del lado1 del triangulo">
+                        </li>
+                        <li id="lado2triangulo-label">
+                            <label for="lado2triangulo">Lado 2 Triangulo</label>
+                            <input type="number" id="lado2triangulo" placeholder="Escriba el tamaño del lado2 del triangulo">
+                        </li>
+                        <li id="lado3triangulo-label">
+                            <label for="lado3triangulo">Lado 3 Triangulo</label>
+                            <input type="number" id="lado3triangulo" placeholder="Escriba el tamaño del lado3 del triangulo">
+                        </li>
+                        <li id="alturaTriangulo-label">
+                            <label for="alturaTriangulo">Altura Triangulo</label>
+                            <input type="number" id="alturaTriangulo" placeholder="Escriba el tamaño de la altura del triangulo">
+                        </li>
+                        <li id="baseTriangulo-label">
+                            <label for="baseTriangulo">Base Triangulo</label>
+                            <input type="number" id="baseTriangulo" placeholder="Escriba el tamaño de la base del triangulo">
+                        </li>
+                        <li id="radioCirculo-label">
+                            <label for="radioCirculo">Radio del Circulo</label>
+                            <input type="number" id="radioCirculo" placeholder="Escriba el radio del circulo">
+                        </li>
+                        <li>
+                            <label for="calculo">¿Qué va a calcular?</label>
+                            <select name="calculo" id="calculo">
+                                <option value="">Selecciones una...</option>
+                                <option value="1">Perímetro</option>
+                                <option value="2">Área</option>                             
+                            </select>
+                        </li>
+                        <li>
+                        <button type="button" onclick="calcular()">CALCULAR</button>
+                        </li>
+                    </ul>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="./figuras.js"></script>
+</body>
+</html>
